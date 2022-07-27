@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lab.labbe.mapper.UserMapper">
+    <update id="update">
+        update sys_user
+        <set>
+            <if test="username != null">
+            username = #{username},
+            </if>
+<!--            <if test="password != null">-->
+<!--                password = #{password}-->
+<!--            </if>-->
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="identity != null">
+                identity = #{identity},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="stu_class != null">
+                stu_class = #{stu_class},
+            </if>
+            <if test="college != null">
+                college = #{college},
+            </if>
+            <if test="name != null">
+                name = #{name}
+            </if>
+        </set>
+        <where>
+        id = #{id}
+        </where>
+    </update>
+</mapper>
