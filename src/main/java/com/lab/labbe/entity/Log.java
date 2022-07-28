@@ -8,11 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class User {
-    private Integer id;
-    private Integer count;
-
-    public Integer getId() {
-        return id;
-    }
+public class Log {
+    private String operate;
 }

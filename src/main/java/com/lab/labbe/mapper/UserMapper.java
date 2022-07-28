@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserMapper {
     @Select("SELECT * from sys_user")
     List<User> findAll();
-    @Insert("INSERT into sys_user(username, password ,phone, identity, sex, college, stu_class, name) VALUES (#{username}, #{password}, #{phone}, #{identity}, #{sex}, #{college}, #{stu_class}, #{name})")
+    @Insert("INSERT into sys_user(count) VALUES (#{count})")
     int insert(User user);
 
     int update(User user);

@@ -4,15 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class User {
-    private Integer id;
-    private Integer count;
+public class Wish {
+    private Integer wishID;
+    private String condition;
+    private String content;
+    private Date createdAt;
 
     public Integer getId() {
-        return id;
+        return wishID;
     }
 }
